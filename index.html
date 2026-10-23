@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Syphilis Through the Clinical Lens | PAHO/LSHTM Webinar Series</title>
+<style>
+:root {
+  --navy:#13324b; --navy2:#0c263c; --teal:#007f86; --teal2:#0e9aa1;
+  --orange:#f28c28; --cream:#f5f7f8; --ink:#20303c; --muted:#5e6c76; --white:#fff;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff;line-height:1.55}
+a{color:inherit} .wrap{width:min(1160px,92%);margin:auto}
+.topbar{background:var(--navy2);color:#d9e6ee;font-size:.9rem;padding:.55rem 0}
+.topbar .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.hero{background:linear-gradient(120deg,var(--navy2),var(--navy));color:#fff;padding:5.5rem 0 4.5rem}
+.kicker{display:inline-block;background:var(--orange);color:#172b3c;font-weight:800;letter-spacing:.06em;padding:.4rem .75rem;border-radius:999px;font-size:.83rem}
+.hero h1{font-size:clamp(2.5rem,6vw,5.25rem);line-height:.98;margin:.9rem 0 1rem;max-width:900px}
+.hero .sub{font-size:clamp(1.1rem,2vw,1.45rem);max-width:840px;color:#e5eef3}
+.hero-actions{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:2rem}
+.btn{display:inline-block;text-decoration:none;font-weight:800;padding:.9rem 1.15rem;border-radius:.45rem}
+.btn-primary{background:var(--orange);color:#132a3d} .btn-secondary{border:2px solid #c9dce6;color:#fff}
+.partner-line{margin-top:2rem;color:#c9dce6;font-size:.95rem}
+.quick{background:var(--cream);border-bottom:1px solid #dde5e8}
+.quick .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#dde5e8}
+.quick div{background:var(--cream);padding:1.1rem 1rem} .quick strong{display:block;color:var(--navy);font-size:.82rem;text-transform:uppercase;letter-spacing:.05em}
+section{padding:4.5rem 0} section h2{font-size:clamp(2rem,4vw,3.25rem);color:var(--navy);margin:0 0 1rem}
+.lead{font-size:1.18rem;max-width:850px;color:#44545f}
+.about-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:3rem;align-items:start}
+.info-box{background:#eef6f6;border-left:5px solid var(--teal);padding:1.4rem;border-radius:.4rem}
+.info-box h3{margin-top:0;color:var(--navy)}
+.sessions{background:#f6f8f9}
+.session-card{display:grid;grid-template-columns:90px 1fr;background:white;border:1px solid #dce5e9;border-radius:.8rem;overflow:hidden;margin:1.2rem 0;box-shadow:0 6px 18px rgba(18,45,63,.05)}
+.session-index{background:var(--navy);color:#fff;font-size:1.8rem;font-weight:800;display:flex;align-items:flex-start;justify-content:center;padding-top:1.5rem}
+.session-main{padding:1.55rem 1.8rem}
+.session-meta{display:flex;gap:.65rem 1.4rem;flex-wrap:wrap;color:var(--teal);font-weight:800;font-size:.95rem}
+.session-main h3{font-size:1.55rem;color:var(--navy);margin:.35rem 0 .65rem}
+.roles{display:none}
+
+.session-speakers{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin:1rem 0 1.1rem}
+.session-speaker{display:grid;grid-template-columns:64px 1fr;gap:.7rem;align-items:center;background:#f6f8f9;border:1px solid #e1e8eb;border-radius:.55rem;padding:.65rem}
+.session-speaker img{width:64px;height:64px;object-fit:cover;border-radius:50%}
+.session-speaker .role{display:block;color:var(--teal);font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.04em}
+.session-speaker .name{display:block;color:var(--navy);font-weight:800;line-height:1.15;margin:.12rem 0}
+.session-speaker .aff{display:block;color:#5d6a73;font-size:.78rem;line-height:1.25}
+.session-speaker.tbc{grid-template-columns:1fr;min-height:78px;align-content:center;text-align:center}
+
+.roles span{background:#f6f8f9;padding:.8rem;border-radius:.45rem;font-size:.92rem}
+.roles strong{display:block;color:var(--navy);font-size:.78rem;text-transform:uppercase;letter-spacing:.04em;margin-bottom:.2rem}
+details{border-top:1px solid #e3e8eb;padding-top:.8rem} summary{cursor:pointer;color:var(--teal);font-weight:800}
+.format-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:.8rem;margin-top:2rem}
+.format-grid div{border-top:4px solid var(--orange);background:#f6f8f9;padding:1rem;border-radius:.35rem}
+.format-grid strong{display:block;color:var(--navy);font-size:1.1rem}
+.faculty{background:var(--navy2);color:#fff} .faculty h2{color:#fff} .faculty .lead{color:#d8e5ec}
+.faculty-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem}
+.faculty-card{background:#fff;color:var(--ink);border-radius:.7rem;overflow:hidden;display:grid;grid-template-columns:105px 1fr;min-height:125px}
+.faculty-card img{width:105px;height:100%;object-fit:cover}
+.faculty-card div{padding:.9rem} .faculty-card h3{margin:0;color:var(--navy);font-size:1.05rem;line-height:1.2}
+.faculty-card p{margin:.2rem 0;font-size:.86rem;color:#52616b} .faculty-card .degree{color:var(--teal);font-weight:700}
+.resources-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.5rem}
+.resource{border:1px solid #dce5e9;border-radius:.6rem;padding:1.3rem} .resource h3{color:var(--navy);margin-top:0}
+.cta{background:var(--orange);padding:3.8rem 0} .cta h2{color:#132a3d} .cta p{max-width:760px;font-size:1.1rem}
+.cta .btn{background:var(--navy);color:#fff}
+footer{background:#091e30;color:#cad9e1;padding:2rem 0;font-size:.9rem}
+footer strong{color:#fff}
+@media(max-width:900px){
+ .quick .wrap{grid-template-columns:1fr 1fr} .about-grid{grid-template-columns:1fr}
+ .roles{grid-template-columns:1fr} .format-grid{grid-template-columns:1fr 1fr}
+ .faculty-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:620px){
+ .hero{padding:4rem 0 3rem} .quick .wrap{grid-template-columns:1fr}
+ .session-card{grid-template-columns:55px 1fr} .session-index{font-size:1.2rem}
+ .session-main{padding:1.15rem} .format-grid,.faculty-grid,.resources-grid{grid-template-columns:1fr}
+ .faculty-card{grid-template-columns:90px 1fr} .faculty-card img{width:90px}
+}
+
+.session-main details{margin-top:.85rem}
+.session-main details ul{margin-bottom:.2rem}
+.session-speakers + details{border-top:1px solid #e3e8eb;padding-top:.8rem}
+
+
+.session-nav{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:2rem}
+.session-nav a{padding:.5rem .8rem;border:1px solid #7393a8;border-radius:999px;text-decoration:none;font-size:.9rem;color:white}
+.session-section{margin-top:1.5rem}.session-section h4{font-size:1.1rem;color:var(--navy);margin:0 0 .6rem;border-bottom:2px solid #dbe7eb;padding-bottom:.35rem}
+.session-section p{margin:.6rem 0}.session-section a{color:#006a76;text-underline-offset:3px}
+.recording-panel{background:#e8f4f3;border:1px solid #b6d9d7;border-left:5px solid var(--teal);padding:1.3rem;margin-top:1.6rem;border-radius:.5rem}
+.recording-panel h4{margin:0 0 .75rem;font-size:1.15rem;color:var(--navy)}.recording-panel p{margin:.6rem 0 0;font-size:.9rem}
+.recording-actions{display:flex;gap:.65rem;flex-wrap:wrap}.btn-recording{background:var(--teal);color:white}.btn-recording:hover{background:var(--navy)}
+a:focus-visible{outline:3px solid var(--orange);outline-offset:4px}.session-card{scroll-margin-top:1rem}
+@media(max-width:1100px){.session-speakers{grid-template-columns:1fr}.session-speaker{grid-template-columns:64px 1fr}}
+@media(max-width:620px){.session-nav{gap:.4rem}.session-nav a{font-size:.8rem}.btn-recording{width:100%;text-align:center}.session-section a{overflow-wrap:anywhere}}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="wrap">
+    <span>Pan American Health Organization · London School of Hygiene &amp; Tropical Medicine</span>
+    <span>Webinar series for health professionals</span>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="kicker">WEBINAR SERIES · SEPTEMBER–OCTOBER 2026</span>
+    <h1>Syphilis Through the Clinical Lens</h1>
+    <p class="sub">State of the art on diagnosis, treatment, and prevention across the Americas</p>
+    <div class="hero-actions">
+      <a href="#sessions" class="btn btn-primary">Browse sessions and recordings</a><a href="https://www.dropbox.com/scl/fo/l5c5zgvehs7uejnsyqf58/ACN1R0GxOf85MPIJoNofXS4?rlkey=p44oip47edv4v6bm86hs8z5w0&amp;st=64wrzo2u&amp;dl=0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Open course materials</a></div>
+    <p class="partner-line">A joint webinar series from PAHO and the WHO Collaborating Centre for Sexually Transmitted Infections at LSHTM.</p>
+  <nav class="session-nav" aria-label="Session navigation"><a href="#session-01">01  Diagnosis</a><a href="#session-02">02  Treatment</a><a href="#session-03">03  Linkage to care</a><a href="#session-04">04  Key populations</a><a href="#session-05">05  Pregnancy</a></nav></div>
+</header>
+
+<div class="quick">
+  <div class="wrap">
+    <div><strong>Dates</strong>29 September–21 October 2026</div>
+    <div><strong>Time zone</strong>Eastern Time (ET), Washington, DC · UTC−4</div>
+    <div><strong>Format</strong>Five 60-minute interactive sessions</div>
+    <div><strong>Languages</strong>English · Spanish · Portuguese interpretation</div>
+  </div>
+</div>
+
+<main>
+<section id="about">
+  <div class="wrap about-grid">
+    <div>
+      <h2>About the series</h2>
+      <p class="lead">Syphilis continues to pose an important clinical and public health challenge across the Region of the Americas, including the resurgence of adult and congenital syphilis. This webinar series brings clinical updates together with programmatic, laboratory, surveillance, and implementation perspectives.</p>
+      <p>Developed jointly by the Pan American Health Organization (PAHO) and the WHO Collaborating Centre for Sexually Transmitted Infections at the London School of Hygiene &amp; Tropical Medicine (LSHTM), the series brings together regional and international experts in STI clinical practice, diagnostics, research, and public health.</p>
+      <p>Each session uses a case-based format designed for practical application in clinical and public-health settings. Sessions are intended for health professionals, public health practitioners, laboratory professionals, programme managers, and others working in syphilis prevention, diagnosis, treatment, and elimination.</p>
+    </div>
+    <aside class="info-box">
+      <h3>Revisit the series</h3><p>Access all five session summaries, publications, recordings, and shared course materials. The recordings appear at the end of each session.</p><a href="https://www.dropbox.com/scl/fo/l5c5zgvehs7uejnsyqf58/ACN1R0GxOf85MPIJoNofXS4?rlkey=p44oip47edv4v6bm86hs8z5w0&amp;st=64wrzo2u&amp;dl=0" target="_blank" rel="noopener noreferrer">Open course materials →</a></aside>
+  </div>
+</section>
+
+<section class="sessions" id="sessions">
+  <div class="wrap">
+    <h2>Sessions and recordings</h2>
+    <p class="lead">Five sessions move from diagnosis and treatment through linkage to care, key populations, and prevention of congenital syphilis.</p>
+    
+    <article class="session-card" id="session-01">
+      <div class="session-index">01</div>
+      <div class="session-main">
+        <div class="session-meta">
+          <span>29 September 2026</span>
+          <span>10:00–11:00 a.m. ET (UTC−4)</span>
+        </div>
+        <h3>Diagnosis and laboratory approaches</h3>
+        <div class="session-speakers"><div class="session-speaker">
+            <img src="assets/Joseph_D_Tucker.jpg" alt="Headshot of Joseph D. Tucker">
+            <div><span class="role">Chair</span><span class="name">Joseph D. Tucker</span><span class="aff">University of North Carolina at Chapel Hill · LSHTM</span></div>
+          </div><div class="session-speaker">
+            <img src="assets/Valerie_Wilson.png" alt="Headshot of Valerie Wilson">
+            <div><span class="role">Evidence presentation</span><span class="name">Valerie Wilson</span><span class="aff">Caribbean Med Labs Foundation</span></div>
+          </div><div class="session-speaker">
+            <img src="assets/Tina_Hylton_Kong.png" alt="Headshot of Tina Hylton-Kong">
+            <div><span class="role">Case presenter</span><span class="name">Tina Hylton-Kong</span><span class="aff">University of the West Indies, Mona</span></div>
+          </div></div>
+        <div class="session-section"><h4>Key topics</h4><p>Clinical staging and natural history; treponemal and non-treponemal testing algorithms; rapid and dual HIV/syphilis tests; interpretation of titres; diagnosis of neurosyphilis.</p></div><div class="session-section"><h4>Learning objectives</h4><ul><li>Recognise the clinical features of primary, secondary, latent, and tertiary syphilis</li><li>Select and interpret appropriate serological tests, including reverse-sequence algorithms</li><li>Identify when cerebrospinal fluid examination and neurosyphilis evaluation are indicated</li></ul></div><div class="session-section"><h4>Publications and resources</h4><p><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11695141/" target="_blank" rel="noopener noreferrer">Sweitzer S, Duncan JA, Seña AC. Update on syphilis diagnostics. Curr Opin Infect Dis. 2025 Feb 1;38(1):44-53. doi: 10.1097/QCO.0000000000001073. Epub 2024 Dec 6. PMID: 39641765; PMCID: PMC11695141.</a></p><p><a href="https://www.cdc.gov/mmwr/volumes/73/rr/rr7301a1.htm" target="_blank" rel="noopener noreferrer">Papp JR, Park IU, Fakile Y, Pereira L, Pillay A, Bolan GA. CDC Laboratory Recommendations for Syphilis Testing, United States, 2024. MMWR Recomm Rep 2024;73(No. RR-1):1–32. DOI: http://dx.doi.org/10.15585/mmwr.rr7301a1.</a></p></div><div class="session-section"><h4>Session summary</h4><p>The webinar focused on the diagnosis of syphilis, with Dr. Tina Hylton-Kong and Ms. Valerie Wilson as the main speakers. Dr. Hylton-Kong discussed the epidemiology, natural history, and clinical staging of syphilis, including primary, secondary, latent, and tertiary stages, and presented two clinical cases to illustrate diagnosis and management. She emphasized the importance of thorough history-taking, physical examination, and appropriate serological testing, including treponemal and non-treponemal tests, and highlighted the need for follow-up and evaluation for neurosyphilis in certain cases. Ms. Wilson provided an in-depth overview of serological testing algorithms, comparing traditional and reverse testing sequences, and discussed the role of rapid diagnostic tests, dual HIV-syphilis tests, and nucleic acid amplification techniques. She explained the limitations and interpretation challenges of different tests and the importance of quality assurance in laboratory practices. The session concluded with a Q&amp;A where questions about complex cases, diagnostic challenges, and regional issues were addressed.</p></div><div class="recording-panel"><h4>Watch the recording</h4><div class="recording-actions"><a href="https://paho-org.zoom.us/rec/share/5Qg6TDuZDLOYm-MQEOXPO4y2oUSJ1HkloRzhH0nDl9zcelO-LdDP4oWry5IpVFMg.ql3dHjQtk5Mk8zgP" target="_blank" rel="noopener noreferrer" class="btn btn-recording">Watch Session 1 →</a></div></div></div>
+    </article>
+    <article class="session-card" id="session-02">
+      <div class="session-index">02</div>
+      <div class="session-main">
+        <div class="session-meta">
+          <span>30 September 2026</span>
+          <span>10:00–11:00 a.m. ET (UTC−4)</span>
+        </div>
+        <h3>Treatment and clinical management</h3>
+        <div class="session-speakers"><div class="session-speaker">
+            <img src="assets/Michael_Marks.png" alt="Headshot of Michael Marks">
+            <div><span class="role">Chair</span><span class="name">Michael Marks</span><span class="aff">LSHTM · University College London Hospitals</span></div>
+          </div><div class="session-speaker">
+            <img src="assets/Adele_Schwartz_Benzaken.png" alt="Headshot of Adele Schwartz Benzaken">
+            <div><span class="role">Evidence presentation</span><span class="name">Adele Schwartz Benzaken</span><span class="aff">AIDS Healthcare Foundation</span></div>
+          </div><div class="session-speaker tbc">
+            <div><span class="role">Case presenter</span><span class="name">Dee Miller</span></div>
+          </div></div>
+        <div class="session-section"><h4>Key topics</h4><p>Benzathine penicillin G regimens by stage; management of penicillin allergy; alternatives and their evidence base; treatment of neurosyphilis; follow-up and definitions of treatment failure versus reinfection.</p></div><div class="session-section"><h4>Learning objectives</h4><ul><li>Prescribe stage-appropriate treatment in line with current PAHO/WHO guidance</li><li>Manage penicillin allergy, treatment reactions, and complex presentations</li><li>Distinguish treatment failure from reinfection and act on serological follow-up</li></ul></div><div class="session-section"><h4>Publications and resources</h4><p><a href="https://pubmed.ncbi.nlm.nih.gov/3773158/" target="_blank" rel="noopener noreferrer">Ziaya PR, Hankins GDV, Gilstrap LC, Halsey AB. Intravenous Penicillin Desensitization and Treatment During Pregnancy. JAMA. 1986;256(18):2561–2562. doi:10.1001/jama.1986.03380180123032</a></p></div><div class="session-section"><h4>Session summary</h4><p>This session explored challenges in diagnosing, treating, and monitoring syphilis through clinical cases involving ocular disease and infection during pregnancy. Discussions emphasized selecting treatment according to disease stage and clinical manifestations, with penicillin remaining the preferred therapy. The presenters distinguished the Jarisch–Herxheimer reaction from true penicillin allergy and highlighted the importance of appropriate allergy assessment before excluding penicillin. Alternative treatments were reviewed, alongside their evidence limitations and the role of desensitization during pregnancy when indicated. The session also addressed sexual partner management to interrupt transmission and prevent reinfection. Clinical and serological follow-up featured prominently, including interpretation of changes in nontreponemal test titres to assess treatment response and investigate possible reinfection or treatment failure. Throughout the discussion, speakers stressed that interpretation requires consideration of baseline titres, disease stage, and subsequent sexual exposures, and that management should follow national protocols while ensuring patients remain engaged in care throughout treatment and subsequent follow-up.</p></div><div class="recording-panel"><h4>Watch the recording</h4><div class="recording-actions"><a href="https://paho-org.zoom.us/rec/share/AYZ-qttoke8lzcbqWpk7g0IpxlLHMt778LsxrUBDJziG7HR32lLumoja2T1kWxE.1FQuUMceUW8gyBfj?startTime=1790776798000" target="_blank" rel="noopener noreferrer" class="btn btn-recording">Watch Sessions 2 and 3 →</a></div><p>Sessions 2 and 3 share this recording.</p></div></div>
+    </article>
+    <article class="session-card" id="session-03">
+      <div class="session-index">03</div>
+      <div class="session-main">
+        <div class="session-meta">
+          <span>30 September 2026</span>
+          <span>11:00 a.m.–12:00 p.m. ET (UTC−4)</span>
+        </div>
+        <h3>Linkage to care</h3>
+        <div class="session-speakers"><div class="session-speaker">
+            <img src="assets/Emma_Slaymaker.png" alt="Headshot of Emma Slaymaker">
+            <div><span class="role">Chair</span><span class="name">Emma Slaymaker</span><span class="aff">London School of Hygiene &amp; Tropical Medicine</span></div>
+          </div><div class="session-speaker">
+            <img src="assets/Angelica_Espinosa_Miranda.jpg" alt="Headshot of Angelica Espinosa Miranda">
+            <div><span class="role">Evidence presentation</span><span class="name">Angelica Espinosa Miranda</span><span class="aff">Federal University of Espírito Santo (UFES)</span></div>
+          </div><div class="session-speaker">
+            <img src="assets/Mayara_Secco_Torres_Silva.png" alt="Headshot of Mayara Secco Torres Silva">
+            <div><span class="role">Case presenter</span><span class="name">Mayara Secco Torres Silva</span><span class="aff">INI–Fiocruz, Rio de Janeiro</span></div>
+          </div></div>
+        <div class="session-section"><h4>Key topics</h4><p>Define linkage to syphilis care; existing systems for linkage to care; barriers to linkage to care; interventions to increase linkage to care.</p></div><div class="session-section"><h4>Learning objectives</h4><ul><li>Identify main challenges with linkage to care in line with current PAHO/WHO guidance</li><li>Describe key implementation strategies to promote linkage to care</li><li>Describe health system approaches to linkage to care</li></ul></div><div class="session-section"><h4>Publications and resources</h4><p><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4577872/" target="_blank" rel="noopener noreferrer">Tang EC, Segura ER, Clark JL, et al The syphilis care cascade: tracking the course of care after screening positive among men and transgender women who have sex with men in Lima, Peru BMJ Open 2015;5:e008552. doi: 10.1136/bmjopen-2015-008552</a></p></div><div class="session-section"><h4>Session summary</h4><p>This session examined how social circumstances and health system barriers affect syphilis diagnosis, treatment completion, and prevention of congenital infection. Two clinical cases, involving a young woman experiencing socioeconomic vulnerability and a man living with HIV, illustrated missed opportunities for diagnosis, delayed review of results, and difficulties completing treatment. Work commitments, financial constraints, concerns about adverse effects, scheduling difficulties, stigma, and confidentiality emerged as barriers. The discussion emphasized that linkage to care requires a coordinated pathway from testing through treatment completion, extending beyond referral alone. Speakers highlighted the need to translate WHO recommendations into practical workflows, supported by reliable penicillin supplies and professionals trained to administer treatment. Proposed approaches included flexible service hours, provider reminders, digital tools, patient education, and community engagement. The session reinforced person-centred care, integration with sexual and reproductive health services, and using every healthcare encounter as an opportunity to offer prevention, testing, treatment, and support for continuity.</p></div><div class="recording-panel"><h4>Watch the recording</h4><div class="recording-actions"><a href="https://paho-org.zoom.us/rec/share/AYZ-qttoke8lzcbqWpk7g0IpxlLHMt778LsxrUBDJziG7HR32lLumoja2T1kWxE.1FQuUMceUW8gyBfj?startTime=1790776798000" target="_blank" rel="noopener noreferrer" class="btn btn-recording">Watch Sessions 2 and 3 →</a></div><p>Sessions 2 and 3 share this recording.</p></div></div>
+    </article>
+    <article class="session-card" id="session-04">
+      <div class="session-index">04</div>
+      <div class="session-main">
+        <div class="session-meta">
+          <span>7 October 2026</span>
+          <span>10:00–11:00 a.m. ET (UTC−4)</span>
+        </div>
+        <h3>Public health and key populations</h3>
+        <div class="session-speakers"><div class="session-speaker">
+            <img src="assets/Philippe_Mayaud.png" alt="Headshot of Philippe Mayaud">
+            <div><span class="role">Chair</span><span class="name">Philippe Mayaud</span><span class="aff">London School of Hygiene &amp; Tropical Medicine</span></div>
+          </div><div class="session-speaker">
+            <img src="assets/Ariel_Eduardo_Campos_Loza.png" alt="Headshot of Ariel Eduardo Campos Loza">
+            <div><span class="role">Evidence presentation</span><span class="name">Ariel Eduardo Campos Loza</span><span class="aff">University of Guadalajara</span></div>
+          </div></div>
+        <div class="session-section"><h4>Key topics</h4><p>Epidemiology of resurgence among men who have sex with men, sex workers, transgender populations, and people living with HIV; integration of syphilis services into HIV, antenatal services, and primary care; partner services; surveillance; emerging prevention tools including doxycycline post-exposure prophylaxis (DoxyPEP).</p></div><div class="session-section"><h4>Learning objectives</h4><ul><li>Apply integrated service delivery models that combine syphilis with HIV platforms</li><li>Understand the epidemiology of syphilis in key populations</li><li>Critically appraise the evidence on emerging prevention strategies such as DoxyPEP</li></ul></div><div class="session-section"><h4>Publications and resources</h4><p><a href="https://pubmed.ncbi.nlm.nih.gov/39689342/" target="_blank" rel="noopener noreferrer">Chircop O, Jaggers C, Spiteri M, Schembri A, Padovese V. DOXY do, or DOXY Don't? Syphilis and doxycycline post-exposure prophylaxis: A case report. Int J STD AIDS. 2025 Mar;36(4):324-326. doi: 10.1177/09564624241308026. Epub 2024 Dec 17. PMID: 39689342.</a></p></div><div class="session-section"><h4>Session summary</h4><p>The session addressed syphilis management in key populations, using two clinical cases to illustrate differences in vulnerability and access to prevention. The discussion addressed factors contributing to a high syphilis burden, including higher HIV prevalence, interconnected sexual networks, and limited access to prevention and treatment. The cases involved Deborah, a transgender woman in prison who had recently acquired syphilis, and Pedro, a heterosexual man seeking sexual health advice regarding sex with transgender women. The session reviewed prevention strategies, including doxycycline post-exposure prophylaxis (doxy-PEP), and highlighted structural barriers that restrict access to preventive tools, particularly in prison settings. The session concluded with recommendations on testing frequency, partner notification, and tailoring prevention strategies to individual risk and the structural conditions affecting each population.</p></div><div class="recording-panel"><h4>Watch the recording</h4><div class="recording-actions"><a href="https://paho-org.zoom.us/rec/share/UMCRj6ILGnKWxptay5j8yUWysPGX_bORiHCQM9BAYcyhJoCYmEuk-35AcJuoDvTN.COBZoiFToVFHRcD9" target="_blank" rel="noopener noreferrer" class="btn btn-recording">Watch Session 4 →</a></div></div></div>
+    </article>
+    <article class="session-card" id="session-05">
+      <div class="session-index">05</div>
+      <div class="session-main">
+        <div class="session-meta">
+          <span>21 October 2026</span>
+          <span>10:00–11:00 a.m. ET (UTC−4)</span>
+        </div>
+        <h3>Syphilis in pregnancy and congenital syphilis</h3>
+        <div class="session-speakers"><div class="session-speaker">
+            <img src="assets/Emma_Harding_Esch.png" alt="Headshot of Emma Harding-Esch">
+            <div><span class="role">Chair</span><span class="name">Emma Harding-Esch</span><span class="aff">London School of Hygiene &amp; Tropical Medicine</span></div>
+          </div><div class="session-speaker">
+            <img src="assets/Lindley_A_Barbee.png" alt="Headshot of Lindley A. Barbee">
+            <div><span class="role">Evidence presentation</span><span class="name">Lindley A. Barbee</span><span class="aff">US Centers for Disease Control and Prevention</span></div>
+          </div><div class="session-speaker tbc">
+            <div><span class="role">Case presenter</span><span class="name">Kate Miele</span><span class="aff">US Centers for Disease Control and Prevention</span></div>
+          </div></div>
+        <div class="session-section"><h4>Key topics</h4><p>Antenatal screening strategies; treatment in pregnancy and partner management; evaluation and treatment of the exposed and infected neonate; PAHO case definitions; the EMTCT Plus framework.</p></div><div class="session-section"><h4>Learning objectives</h4><ul><li>Implement antenatal screening and treatment to prevent vertical syphilis transmission</li><li>Evaluate and manage the neonate exposed to or infected with syphilis</li><li>Apply EMTCT Plus indicators and case definitions in clinical and programmatic practice</li></ul></div><div class="session-section"><h4>Publications and resources</h4><p><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6202887/" target="_blank" rel="noopener noreferrer">Andrade ALMB, Magalhães PVVS, Moraes MM, Tresoldi AT, Pereira RM. Late diagnosis of congenital syphilis: a recurring reality in women and children health care in Brazil. Rev Paul Pediatr. 2018;36(3):376–381. doi:10.1590/1984-0462/;2018;36;3;00011.</a></p><p><a href="https://www.std.uw.edu/page/tools/app" target="_blank" rel="noopener noreferrer">Syphilis Tools app — University of Washington</a></p><p><a href="https://www.cdc.gov/std/treatment-guidelines/default.htm" target="_blank" rel="noopener noreferrer">CDC STI Treatment Guidelines 2021 and mobile app</a></p></div><div class="session-section"><h4>Session summary</h4><p>This session focused on syphilis during pregnancy and congenital syphilis. Lindley Barbee presented global and regional epidemiological data, highlighting the continuing burden of preventable congenital infection. Kate Miele presented clinical cases illustrating diagnosis and treatment during pregnancy and management of neonates exposed to syphilis. The presenters reviewed screening recommendations, benzathine penicillin G treatment, and challenges related to testing and treatment shortages. They also introduced practical clinical resources, including the Syphilis Tools app and the STI Treatment Guide app, to support diagnosis and management. The session concluded with questions and answers addressing clinical scenarios and treatment decisions.</p></div><div class="recording-panel"><h4>Watch the recording</h4><div class="recording-actions"><a href="https://paho-org.zoom.us/rec/share/1zxvC7HH33lBT6Wj1bic4k6hAjTfCtMgvgoYBhleLh05Ud5A30Hi9WkRlvg1sLVr.0XjJaj5dX3-GMqzY?startTime=1792591269000" target="_blank" rel="noopener noreferrer" class="btn btn-recording">Watch Session 5 — Part 1 →</a><a href="https://paho-org.zoom.us/rec/share/1zxvC7HH33lBT6Wj1bic4k6hAjTfCtMgvgoYBhleLh05Ud5A30Hi9WkRlvg1sLVr.0XjJaj5dX3-GMqzY?startTime=1792593929000" target="_blank" rel="noopener noreferrer" class="btn btn-recording">Watch Session 5 — Part 2 →</a></div></div></div>
+    </article>
+  </div>
+</section>
+
+<section id="format">
+  <div class="wrap">
+    <h2>How each session works</h2>
+    <p class="lead">Each 60-minute webinar follows a practical case-based structure that connects clinical decision-making with current evidence and guidance.</p>
+    <div class="format-grid">
+      <div><strong>0–3 min</strong>Welcome, framing and audience poll</div>
+      <div><strong>3–15 min</strong>Clinical case and decision point</div>
+      <div><strong>15–25 min</strong>Contrasting case or programmatic challenge</div>
+      <div><strong>25–54 min</strong>Evidence review, guidance and Q&amp;A</div>
+      <div><strong>55–60 min</strong>Key learning points and take-home messages</div>
+    </div>
+  </div>
+</section>
+
+<section class="faculty" id="faculty">
+  <div class="wrap">
+    <h2>Faculty</h2>
+    <p class="lead">The series brings together clinicians, researchers, laboratory experts, programme specialists, and public-health practitioners from across the Americas and beyond.</p>
+    <div class="faculty-grid">
+      
+      <article class="faculty-card">
+        <img src="assets/Joseph_D_Tucker.jpg" alt="Headshot of Joseph D. Tucker">
+        <div>
+          <h3>Joseph D. Tucker</h3>
+          <p class="degree">MD, PhD, AM</p>
+          <p>University of North Carolina at Chapel Hill · London School of Hygiene &amp; Tropical Medicine</p>
+        </div>
+      </article>
+      <article class="faculty-card">
+        <img src="assets/Valerie_Wilson.png" alt="Headshot of Valerie Wilson">
+        <div>
+          <h3>Valerie Wilson</h3>
+          <p class="degree">MSc, MBA</p>
+          <p>Caribbean Med Labs Foundation</p>
+        </div>
+      </article>
+      <article class="faculty-card">
+        <img src="assets/Tina_Hylton_Kong.png" alt="Headshot of Tina Hylton-Kong">
+        <div>
+          <h3>Tina Hylton-Kong</h3>
+          <p class="degree">MD, MPH</p>
+          <p>University of the West Indies, Mona · Epidemiology Research &amp; Training Unit</p>
+        </div>
+      </article>
+      <article class="faculty-card">
+        <img src="assets/Michael_Marks.png" alt="Headshot of Michael Marks">
+        <div>
+          <h3>Michael Marks</h3>
+          <p class="degree">MBBS, PhD</p>
+          <p>London School of Hygiene &amp; Tropical Medicine · University College London Hospitals</p>
+        </div>
+      </article>
+      <article class="faculty-card">
+        <img src="assets/Adele_Schwartz_Benzaken.png" alt="Headshot of Adele Schwartz Benzaken">
+        <div>
+          <h3>Adele Schwartz Benzaken</h3>
+          <p class="degree">MD, PhD</p>
+          <p>AIDS Healthcare Foundation</p>
+        </div>
+      </article>
+      <article class="faculty-card">
+        <img src="assets/Emma_Slaymaker.png" alt="Headshot of Emma Slaymaker">
+        <div>
+          <h3>Emma Slaymaker</h3>
+          <p class="degree">MSc, PhD</p>
+          <p>London School of Hygiene &amp; Tropical Medicine</p>
+        </div>
+      </article>
+      <article class="faculty-card">
+        <img src="assets/Angelica_Espinosa_Miranda.jpg" alt="Headshot of Angelica Espinosa Miranda">
+        <div>
+          <h3>Angelica Espinosa Miranda</h3>
+          <p class="degree">MD, PhD</p>
+          <p>Federal University of Espírito Santo (UFES)</p>
+        </div>
+      </article>
+      <article class="faculty-card">
+        <img src="assets/Mayara_Secco_Torres_Silva.png" alt="Headshot of Mayara Secco Torres Silva">
+        <div>
+          <h3>Mayara Secco Torres Silva</h3>
+          <p class="degree">MD</p>
+          <p>INI–Fiocruz, Rio de Janeiro</p>
+        </div>
+      </article>
+      <article class="faculty-card">
+        <img src="assets/Philippe_Mayaud.png" alt="Headshot of Philippe Mayaud">
+        <div>
+          <h3>Philippe Mayaud</h3>
+          <p class="degree">MD, MSc</p>
+          <p>London School of Hygiene &amp; Tropical Medicine</p>
+        </div>
+      </article>
+      <article class="faculty-card">
+        <img src="assets/Ariel_Eduardo_Campos_Loza.png" alt="Headshot of Ariel Eduardo Campos Loza">
+        <div>
+          <h3>Ariel Eduardo Campos Loza</h3>
+          <p class="degree">MD, MPH</p>
+          <p>Antiguo Hospital Civil de Guadalajara · University of Guadalajara</p>
+        </div>
+      </article>
+      <article class="faculty-card">
+        <img src="assets/Emma_Harding_Esch.png" alt="Headshot of Emma Harding-Esch">
+        <div>
+          <h3>Emma Harding-Esch</h3>
+          <p class="degree">MSc, PhD</p>
+          <p>London School of Hygiene &amp; Tropical Medicine</p>
+        </div>
+      </article>
+      <article class="faculty-card">
+        <img src="assets/Lindley_A_Barbee.png" alt="Headshot of Lindley A. Barbee">
+        <div>
+          <h3>Lindley A. Barbee</h3>
+          <p class="degree">MD, MPH</p>
+          <p>US Centers for Disease Control and Prevention</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="resources">
+  <div class="wrap">
+    <h2>Resources</h2>
+    <p class="lead">Use the webinar series alongside additional learning resources on syphilis and congenital syphilis.</p>
+    <div class="resources-grid">
+      <div class="resource">
+        <h3>PAHO course on congenital syphilis</h3>
+        <p>Continue learning through PAHO’s Virtual Campus for Public Health course on congenital syphilis.</p>
+        <a href="https://campus.paho.org/en/course/congenital-syphilis" target="_blank" rel="noopener"><strong>Access the course →</strong></a>
+      </div>
+      <div class="resource">
+        <h3>Shared webinar materials</h3><p>Access the series files and supporting materials in the shared folder.</p><a href="https://www.dropbox.com/scl/fo/l5c5zgvehs7uejnsyqf58/ACN1R0GxOf85MPIJoNofXS4?rlkey=p44oip47edv4v6bm86hs8z5w0&amp;st=64wrzo2u&amp;dl=0" target="_blank" rel="noopener noreferrer">Open webinar materials →</a></div>
+    <div class="resource"><h3>Syphilis Tools app</h3><a href="https://www.std.uw.edu/page/tools/app" target="_blank" rel="noopener noreferrer">Access this resource →</a></div><div class="resource"><h3>CDC STI Treatment Guidelines and app</h3><a href="https://www.cdc.gov/std/treatment-guidelines/default.htm" target="_blank" rel="noopener noreferrer">Access this resource →</a></div></div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Continue learning</h2><p>Review the recordings, explore the publications, and use the shared materials to support your clinical and public health practice.</p><a href="#sessions" class="btn">Explore the five sessions →</a></div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <strong>Syphilis Through the Clinical Lens</strong><br>
+    Joint webinar series by the Pan American Health Organization and the WHO Collaborating Centre for Sexually Transmitted Infections at the London School of Hygiene &amp; Tropical Medicine.
+  </div>
+</footer>
+</body>
+</html>
