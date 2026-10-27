@@ -7,3 +7,14 @@ Five sessions with faculty, topics, objectives, publications, summaries and reco
 Open index.html with assets alongside it. No build required. To host using GitHub Pages, publish main from the repository root.
 
 Recording access depends on the supplied Zoom settings. Session 4 uses neutral attribution because the source summary had inconsistent speaker attribution.
+
+## Export to PDF
+
+Use the **PDF layout** selector at the top of the webpage, then **Print or save as PDF**.
+
+- **One page per session**: seven pages in total, including the introduction and resource page.
+- **Two pages per session**: twelve pages in total with larger body type; summary and recording access start on the second page of each session.
+
+In the browser print dialog choose Save as PDF, A4 portrait, 100% scale, background graphics on, and browser headers/footers off. All publication and recording hyperlinks remain clickable in the PDF. Faculty portraits remain with the relevant session; the repeated faculty directory and live navigation controls are omitted from print.
+
+The print CSS was rendered and reviewed in both modes using WeasyPrint. Browser print engines can differ slightly.
