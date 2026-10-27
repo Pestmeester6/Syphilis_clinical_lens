@@ -1,5 +1,7 @@
 # Syphilis Through the Clinical Lens
 
+## [Open the webinar website →](https://Pestmeester6.github.io/Syphilis_clinical_lens/)
+
 Participant resources for the PAHO and LSHTM webinar series, September–October 2026.
 
 Five sessions with faculty, topics, objectives, publications, summaries and recordings. Includes course materials and clinical app links.
